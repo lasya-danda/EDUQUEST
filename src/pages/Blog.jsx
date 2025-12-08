@@ -81,7 +81,7 @@ frontend to a mock backend.
     date: "2025-04-20",
     readTime: "7 min read",
     tag: "Backend",
-    image: "/public/course.png", // fallback image from public
+    image: "/src/assets/course.png", // fallback image from public
     excerpt:
       "A simple walkthrough to create a mock API with JSON-Server and connect it to your React frontend.",
     content: `

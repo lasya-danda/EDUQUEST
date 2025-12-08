@@ -17,7 +17,7 @@ import Testimonials from "./pages/Testimonials";
 
 import Courses from "./pages/Courses";          // ADMIN (CRUD)
 import CourseEditor from "./pages/CourseEditor";
- // USER view-only ✅
+import UserCourses from "./pages/Usercourses";  // USER view-only ✅
 
 import AdminLogin from "./pages/AdminLogin";
 import UserLogin from "./pages/UserLogin";

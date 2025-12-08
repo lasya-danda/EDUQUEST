@@ -7,7 +7,7 @@ export default function Team() {
       id: 1,
       name: "Rohit Kumar",
       role: "Founder & Lead Instructor",
-      image: "/src/assets/rohit.jpg",
+      image: "/src/assets/devanshi.jpg",
       bio: "Full-stack developer with 7+ years experience in teaching and building modern web apps."
     },
     {
@@ -74,7 +74,7 @@ export default function Team() {
         <p className="text-slate-500 text-sm">
           Want to join the EduQuest team?{" "}
           <span className="text-indigo-600 cursor-pointer hover:underline">
-            Contact us
+            
           </span>
         </p>
       </div>

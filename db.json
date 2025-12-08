@@ -7,7 +7,7 @@
       "detailedDescription": "Python is a beginner-friendly language used for web development, AI, automation, data science, and more. In this course, you will learn variables, loops, functions, error handling, file operations, and a mini-project at the end.",
       "price": 499,
       "duration": "6 weeks",
-      "image": "/python.png"
+      "image": "/src/assets/python.png"
     },
     {
       "id": 2,
@@ -16,7 +16,15 @@
       "detailedDescription": "This React course teaches component-based UI, React hooks, routing, props, state management, API integration, Tailwind styling, and deployment. You will build a fully working SPA project.",
       "price": 999,
       "duration": "8 weeks",
-      "image": "/react.png"
+      "image": "/src/assets/course.png"
+    },
+    {
+      "id": "4891",
+      "title": "lasya",
+      "description": "xdcfgvbhjnkm,",
+      "price": 455,
+      "duration": "tryu",
+      "image": ""
     }
   ]
 }

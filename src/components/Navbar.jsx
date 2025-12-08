@@ -2,6 +2,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useAuth } from "../AuthContext";
+import { FiLogOut } from "react-icons/fi";
 
 export default function Navbar() {
   const { role, logout } = useAuth();
@@ -26,18 +27,18 @@ export default function Navbar() {
         {!isAuthScreen && (
           <div className="flex items-center gap-5 text-sm">
 
-            <Link to="/landing" className="hover:text-indigo-600">Home</Link>
-            <Link to="/about" className="hover:text-indigo-600">About</Link>
-            <Link to="/team" className="hover:text-indigo-600">Team</Link>
-            <Link to="/pricing" className="hover:text-indigo-600">Pricing</Link>
-            <Link to="/blog" className="hover:text-indigo-600">Blog</Link>
-            <Link to="/contact" className="hover:text-indigo-600">Contact</Link>
+            <Link to="/landing" className="text-slate-700 hover:text-indigo-600 transition">Home</Link>
+            <Link to="/about" className="text-slate-700 hover:text-indigo-600 transition">About</Link>
+            <Link to="/team" className="text-slate-700 hover:text-indigo-600 transition">Team</Link>
+            <Link to="/pricing" className="text-slate-700 hover:text-indigo-600 transition">Pricing</Link>
+            <Link to="/blog" className="text-slate-700 hover:text-indigo-600 transition">Blog</Link>
+            <Link to="/contact" className="text-slate-700 hover:text-indigo-600 transition">Contact</Link>
 
             {/* Admin menu */}
             {role === "admin" && (
               <Link
                 to="/admin/menu"
-                className="px-3 py-1 bg-indigo-600 text-white rounded"
+                className="px-3 py-1.5 bg-gradient-to-r from-indigo-600 to-indigo-500 text-white rounded-lg font-semibold text-xs hover:shadow-lg transition"
               >
                 Admin Menu
               </Link>
@@ -47,7 +48,7 @@ export default function Navbar() {
             {role === "user" && (
               <Link
                 to="/courses"
-                className="px-3 py-1 bg-emerald-600 text-white rounded"
+                className="px-3 py-1.5 bg-gradient-to-r from-emerald-600 to-emerald-500 text-white rounded-lg font-semibold text-xs hover:shadow-lg transition"
               >
                 My Courses
               </Link>
@@ -58,11 +59,12 @@ export default function Navbar() {
               <button
                 onClick={() => {
                   logout();
-                  window.location.href = "/"; // ★ FIXED: Go back to role-selector screen
+                  window.location.href = "/";
                 }}
-                className="px-3 py-1 border rounded text-xs hover:bg-slate-100"
+                className="flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-rose-600 to-red-600 text-white rounded-lg font-semibold text-xs hover:from-rose-700 hover:to-red-700 shadow-md hover:shadow-lg transition-all"
               >
-                Logout ({role})
+                <FiLogOut className="text-sm" />
+                Logout
               </button>
             )}
           </div>

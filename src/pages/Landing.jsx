@@ -1,9 +1,19 @@
 // src/pages/Landing.jsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../AuthContext";
 
 export default function Landing() {
   const navigate = useNavigate();
+  const { role } = useAuth();
+
+  const handleBrowseCourses = () => {
+    if (role === "admin") {
+      navigate("/admin/courses");
+    } else {
+      navigate("/courses");
+    }
+  };
 
   const highlights = [
     { label: "Hands-on projects", value: "30+" },
@@ -66,7 +76,7 @@ export default function Landing() {
 
           <div className="flex flex-wrap gap-3 mb-4">
             <button
-              onClick={() => navigate("/courses")}
+              onClick={handleBrowseCourses}
               className="px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-indigo-600 to-purple-600 shadow-md hover:shadow-lg hover:scale-[1.02] transition"
             >
               Browse all courses
@@ -166,7 +176,7 @@ export default function Landing() {
               </div>
 
               <button
-                onClick={() => navigate("/courses")}
+                onClick={handleBrowseCourses}
                 className="mt-4 self-start text-xs font-semibold text-indigo-600 hover:text-indigo-700"
               >
                 View related courses →
@@ -190,7 +200,7 @@ export default function Landing() {
           </div>
           <div className="flex gap-3">
             <button
-              onClick={() => navigate("/courses")}
+              onClick={handleBrowseCourses}
               className="px-4 py-2 rounded-full text-xs md:text-sm font-semibold text-slate-900 bg-white hover:bg-slate-100"
             >
               Start with a free course
